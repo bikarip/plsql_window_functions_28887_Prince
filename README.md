@@ -60,12 +60,6 @@ Patients and Doctors are parent table while visits is child table as the diagram
 ## 5. SQL JOINs Implementation
 As we have insert querries in our tables we created we are going to do joins.
 
-### 1. INNER JOIN (Valid Transactions)
-*Purpose:* Retrieve details of all completed visits with patient and doctor names.
-
-* INNER JOIN Implementation
-   Connects Visits table with Patients and Doctors to show full details.
-   Only records that match in all three tables will appear.
 ### 1. INNER JOIN
 **Purpose:** Retrieve transactions with valid customers and products. Valid Transactions.
 
@@ -149,16 +143,40 @@ FROM Visits;
 **Interpretation:** Quartile 1 represents our High Value or High spend visits (surgeries/specialist consults), while Quartile 4 represents routine, low-cost checkups.
 
 ## 7. Results Analysis
-### 1. Descriptive Analysis (What happened?)
+### 1. Descriptive Analysis -- What happened?
 **Top Doctor:** Our ranking shows that Dr. Jean Mugisha (Cardiology) is the most successful doctor. He generated 33,000 RWF, which is the highest amount in the hospital.
- * Inactive Patients: We found that 20% of registered patients, specifically Grace, are "dormant." This means they are in our system but have not visited the hospital in 2026.
- * Unused Staff: The data shows that Dr. Divine (Dermatology) had zero visits. She did not treat a single patient during this period.
-2. Diagnostic Analysis (Why did it happen?)
- * High Costs: Cardiology earns the most money because the cost per visit is high (about 16,500 RWF). General Medicine visits are cheaper, so they earn less even with more patients.
- * Patient Trends: By tracking patient Alice, we saw that returning patients tend to spend more money on later visits as their treatment gets more serious.
- * Awareness Gap: Dr. Divine has no patients likely because people do not know the hospital offers Dermatology. It is not a skill issue, but a marketing issue.
-3. Prescriptive Analysis (What should be done next?)
- * Fix Dermatology: The hospital needs to advertise the Dermatology department immediately. If patients don't come, the hospital is paying a doctor who isn't working.
- * Contact Inactive People: The administration should send an SMS or email to "dormant" patients like Grace. Offering them a small discount might encourage them to book an appointment.
- * Reward Top Patients: Since a small group of patients provides most of the money (Quartile 4), the hospital should create a "Gold VIP" program to make sure these valuable customers stay happy and don't switch to another hospital.
+
+**Inactive Patients:** We found that 20% of registered patients, specifically Grace, are "dormant." This means they are in our system but have not visited the hospital in 2026.
+
+**Unused Staff:** The data shows that Dr. Divine (Dermatology) had zero visits. She did not treat a single patient during this period.
+### 2. Diagnostic Analysis -- Why did it happen?
+**High Costs:** Cardiology earns the most money because the cost per visit is high (about 16,500 RWF). General Medicine visits are cheaper, so they earn less even with more patients.
+
+**Patient Trends:** By tracking patient Alice, we saw that returning patients tend to spend more money on later visits as their treatment gets more serious.
+
+**Awareness Gap:** Dr. Divine has no patients likely because people do not know the hospital offers Dermatology. It is not a skill issue, but a marketing issue.
+### 3. Prescriptive Analysis -- What should be done next?
+**Fix Dermatology:** The hospital needs to advertise the Dermatology department immediately. If patients don't come, the hospital is paying a doctor who isn't working.
+
+**Contact Inactive People:** The administration should send an SMS or email to "dormant" patients like Grace. Offering and influencing them a small discount might encourage them to book an appointment.
+
+**Reward Top Patients:** Since a small group of patients provides most of the money (Quartile 4), the hospital should create a "ZED BONUS" program to make sure these valuable customers stay happy and don't switch to another hospital.
+## 8. Key Insights
+The analysis of hospital data using SQL JOINs and window functions revealed several important operational insights:
+1. **Underutilized Medical Resource:** The RIGHT JOIN results indicate that the Dermatology department recorded no patient visits during the analyzed period, even though a specialist doctor is assigned to this unit. This suggests inefficient use of hospital resources and potential unnecessary staffing costs and try to advertise the Dermatology department as we have seen above.
+
+2. **High Revenue Dependence on Cardiology:** Ranking and aggregate window functions reveal that Cardiology generates a large share of total hospital revenue, showing heavy financial dependence on a single department.
+
+3. **Inactive Registered Patients:** This is where we found the dormants patients. The LEFT JOIN results identify registered patients with no visit history, representing an opportunity for growth, as they are already registered in system and could be encouraged to utilize hospital services through targeted follow up initiatives.
+
+## 9. References
+
+1.  **Oracle Corporation.** (2023). *Oracle Database SQL Language Reference, 19c*. From [https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/](https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/)
+2.  **PostgreSQL Global Development Group.** (2024). *PostgreSQL 16 Documentation: Window Functions*. From [https://www.postgresql.org/docs/current/tutorial-window.html](https://www.postgresql.org/docs/current/tutorial-window.html)
+    
+3.  **W3Schools.** (n.d.). *SQL LEFT JOIN and RIGHT JOIN Keywords*. From [https://www.w3schools.com/sql/](https://www.w3schools.com/sql/)
+4.  SQL Performance Explained - Markus Winand
+5.  **Elmasri, R., & Navathe, S.** (2016). Fundamentals of Database Systems (7th Edition). Pearson.
+6.  **HealthIT.gov.** (n.d.). What is an Electronic Health Record (EHR)?. From [https://www.healthit.gov/faq/what-electronic-health-record-ehr](https://www.healthit.gov/faq/what-electronic-health-record-ehr) (For Understanding the business context of patient data management and visit tracking.)
+   
 
