@@ -171,12 +171,30 @@ The analysis of hospital data using SQL JOINs and window functions revealed seve
 
 ## 9. References
 
-1.  **Oracle Corporation.** (2023). *Oracle Database SQL Language Reference, 19c*. From [https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/](https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/)
-2.  **PostgreSQL Global Development Group.** (2024). *PostgreSQL 16 Documentation: Window Functions*. From [https://www.postgresql.org/docs/current/tutorial-window.html](https://www.postgresql.org/docs/current/tutorial-window.html)
+1.  **Oracle Corporation.** (2023). *Oracle Database SQL Language Reference, 19c*. 
+2.  **PostgreSQL Global Development Group.** (2024). *PostgreSQL 16 Documentation: Window Functions*. 
     
-3.  **W3Schools.** (n.d.). *SQL LEFT JOIN and RIGHT JOIN Keywords*. From [https://www.w3schools.com/sql/](https://www.w3schools.com/sql/)
+3.  **W3Schools.** (n.d.). *SQL LEFT JOIN and RIGHT JOIN Keywords*. From [https://www.w3schools.com/postgresql/postgresql_left_join.php](https://www.w3schools.com/postgresql/postgresql_left_join.php/)
 4.  SQL Performance Explained - Markus Winand
 5.  **Elmasri, R., & Navathe, S.** (2016). Fundamentals of Database Systems (7th Edition). Pearson.
-6.  **HealthIT.gov.** (n.d.). What is an Electronic Health Record (EHR)?. From [https://www.healthit.gov/faq/what-electronic-health-record-ehr](https://www.healthit.gov/faq/what-electronic-health-record-ehr) (For Understanding the business context of patient data management and visit tracking.)
+6.  **HealthIT.gov.** (n.d.). What is an Electronic Health Record (EHR)?.(For Understanding the business context of patient data management and visit tracking.)
+
+## 10. Integrity Statement
+I, BIKARI Prince, confirm that this work is entirely my own. I have not 
+copied from anyone, and I have not paraphrased other people’s work without 
+permission. 
+As a database professional, I understand the importance of accuracy, confidentiality, and 
+integrity. My reputation depends on being honest, producing quality work, and taking 
+responsibility for everything I do. I have completed this work honestly and independently, 
+following these principles.
+
+
+
+
+
+
+**“Whoever is faithful in very little is also faithful in much.” – Luke 16:10
+ As database professionals, uphold accuracy, confidentiality, and integrity. Your reputation is built on
+ consistent honesty, quality, and responsibility.**
    
 
